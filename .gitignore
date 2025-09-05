@@ -1,0 +1,25 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+
+# Ignore dataset and model (very large files)
+dataset/
+model/
+
+# Ignore uploads folder (user uploaded files)
+uploads/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings
+.vscode/
+.idea/
