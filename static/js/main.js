@@ -56,8 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
   videoPreview.controls = true;
   videoPreview.preload = "metadata";
 
-  // Add video element to container
-  videoPreviewContainer.appendChild(videoPreview);
+  // Create image element
+  const imagePreview = document.createElement("img");
+  imagePreview.id = "image-preview";
+  imagePreview.controls = true;
+  imagePreview.preload = "metadata";
 
   // Insert after the upload section
   uploadSection.parentNode.insertBefore(
@@ -68,12 +71,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle file selection for video preview
   videoInput.addEventListener("change", function (e) {
     const file = e.target.files[0];
+
     if (file) {
       // Create object URL for the video file
       const videoURL = URL.createObjectURL(file);
 
       // Set the video source and show the preview
-      videoPreview.src = videoURL;
+      if (file.type.includes("image/")) {
+        // Add Image element to container
+        videoPreviewContainer.appendChild(imagePreview);
+        imagePreview.src = videoURL;
+        if (videoPreviewContainer.contains(videoPreview)) {
+          videoPreviewContainer.removeChild(videoPreview);
+        }
+      } else {
+        videoPreviewContainer.appendChild(videoPreview);
+        videoPreview.src = videoURL;
+        if (videoPreviewContainer.contains(imagePreview)) {
+          videoPreviewContainer.removeChild(imagePreview);
+        }
+      }
       videoPreviewContainer.classList.remove("hidden");
 
       // Clean up the object URL when no longer needed

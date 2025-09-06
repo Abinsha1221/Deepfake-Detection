@@ -4,7 +4,7 @@ from app.utils import save_video
 import os
 
 main = Blueprint('main', __name__)
-# detector = DeepfakeDetector()
+
 
 def get_detector():
     if 'detector' not in g:
@@ -30,9 +30,12 @@ def analyze():
     
     try:
         detector = get_detector()
-        result = detector.analyze_video(video_path)
-        print("\n\n\n\n Next\n\n\n\n\n\n")
-        # Ensure all values are JSON serializable
+        file_ext = video_path.rsplit('.', 1)[1].lower()
+        if file_ext == 'png' or file_ext == 'jpg':
+            result = detector.image_prediction(video_path)
+        else:
+            result = detector.analyze_video(video_path)
+
         response = {
             'is_deepfake': bool(result['is_deepfake']),
             'confidence': float(result['confidence']),
