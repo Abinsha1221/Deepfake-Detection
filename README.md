@@ -14,11 +14,11 @@ This was developed as a **Mini Project** during our **6th semester B.Tech (CSE -
 ---
 
 ## ⚠️ Important Note
-> **This repository only includes the code for detecting deepfakes in video files (`.mp4`, `.avi`, etc.).**
 
-The version that supports **image (`.jpg`) uploads** is **not included** here.  
-If you need the image detection version, you can **contact me directly** —  
-I can provide it for an **additional cost**. 😁
+This repository includes the complete code and interface for deepfake detection using both video files (.mp4, .avi) and image files (.jpg).
+
+However, the trained model files required for running predictions are NOT included in this repository.
+If you need the model files to run the project fully, please contact me directly to receive them.
 
 ---
 
