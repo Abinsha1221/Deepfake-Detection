@@ -1,6 +1,6 @@
 # 🕵️‍♂️ Deepfake Detection System
 
-A **Deepfake Detection System** that identifies whether a video is **real** or **fake** using **Deep Learning** techniques.  
+A **Deepfake Detection System** that identifies whether an image or video is **real** or **fake** using **Deep Learning** techniques.  
 This was developed as a **Mini Project** during our **6th semester B.Tech (CSE - AI & ML)**.
 
 ---
