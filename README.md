@@ -17,8 +17,14 @@ This was developed as a **Mini Project** during our **6th semester B.Tech (CSE -
 
 This repository includes the complete code and interface for deepfake detection using both video files (.mp4, .avi) and image files (.jpg).
 
-However, the trained model files required for running predictions are NOT included in this repository.
-If you need the model files to run the project fully, please contact me directly to receive them.
+However, the following files are NOT included in this repository due to size and sharing restrictions:
+
+Trained model files required for running deepfake predictions
+
+Dataset, which consists of separate folders for real and fake samples
+
+If you need the trained model or dataset to fully run and test the project, please contact me directly.
+I can provide them upon request.
 
 ---
 
